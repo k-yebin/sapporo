@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#ffffff">
+  <title>맛집 — 삿포로 여행</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .category-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 0 0 4px;
+      scrollbar-width: none;
+      margin-bottom: 16px;
+    }
+    .category-tabs::-webkit-scrollbar { display: none; }
+
+    .cat-tab {
+      background: var(--card);
+      border: 1.5px solid var(--border);
+      color: var(--text-sub);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 50px;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all .15s ease;
+      flex-shrink: 0;
+    }
+    .cat-tab.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: #fff;
+    }
+
+    .restaurant-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .rest-body { padding: 14px 16px 0; }
+
+    .rest-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .rest-name {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .rest-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--red);
+      background: var(--red-light);
+      padding: 3px 9px;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .rest-name-ja {
+      font-size: 12px;
+      color: var(--text-sub);
+      margin-bottom: 6px;
+    }
+
+    .rest-desc {
+      font-size: 13px;
+      color: var(--text-sub);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .rest-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-bottom: 10px;
+    }
+
+    .rest-meta span {
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .rest-actions {
+      display: flex;
+      border-top: 1px solid var(--border);
+    }
+
+    .rest-action-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 11px 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-sub);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: background .1s;
+      text-decoration: none;
+    }
+
+    .rest-action-btn:active { background: var(--bg); }
+    .rest-action-btn + .rest-action-btn { border-left: 1px solid var(--border); }
+    .rest-action-btn.blue { color: var(--red); }
+  </style>
+</head>
+<body>
+
+  <!-- ====== Page Header ====== -->
+  <header class="page-header">
+    <a href="index.html" class="back-btn">‹</a>
+    <h1 class="page-title">맛집</h1>
+    <div class="header-spacer"></div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+      <button class="cat-tab active" onclick="filterCat('all', this)">전체</button>
+      <button class="cat-tab" onclick="filterCat('ramen', this)">라멘</button>
+      <button class="cat-tab" onclick="filterCat('sushi', this)">스시·해산물</button>
+      <button class="cat-tab" onclick="filterCat('jingisukan', this)">징기스칸</button>
+      <button class="cat-tab" onclick="filterCat('sweets', this)">카페·디저트</button>
+      <button class="cat-tab" onclick="filterCat('etc', this)">기타</button>
+    </div>
+
+    <!-- 식당 카드들 -->
+    <div id="restaurantList">
+
+      <!-- 예시 카드 1 -->
+      <div class="restaurant-card" data-cat="ramen">
+        <div class="rest-body">
+          <div class="rest-top">
+            <p class="rest-name">식당명 입력</p>
+            <span class="rest-badge">라멘</span>
+          </div>
+          <p class="rest-name-ja">日本語名 入力</p>
+          <p class="rest-desc">메모 · 추천 메뉴 · 특징 입력 예정.</p>
+          <div class="rest-meta">
+            <span>📍 주소 입력</span>
+            <span>🕐 영업시간 입력</span>
+            <span>💴 가격대 입력</span>
+          </div>
+        </div>
+        <div class="rest-actions">
+          <button class="rest-action-btn blue" onclick="openGoogleMaps('식당명 입력 삿포로')">
+            🗺️ 지도
+          </button>
+          <div style="flex:2;display:flex;align-items:center;padding:0 14px;gap:8px;border-left:1px solid var(--border);">
+            <span style="font-size:11px;color:var(--text-sub);min-width:46px;">맵코드</span>
+            <span style="font-size:13px;font-weight:700;font-family:monospace;flex:1;" id="mc-r1">입력 예정</span>
+            <button class="copy-btn" onclick="copyMapcode(document.getElementById('mc-r1').textContent, this)">복사</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 예시 카드 2 -->
+      <div class="restaurant-card" data-cat="sweets">
+        <div class="rest-body">
+          <div class="rest-top">
+            <p class="rest-name">카페명 입력</p>
+            <span class="rest-badge">카페·디저트</span>
+          </div>
+          <p class="rest-name-ja">日本語名 入力</p>
+          <p class="rest-desc">메모 · 추천 메뉴 · 특징 입력 예정.</p>
+          <div class="rest-meta">
+            <span>📍 주소 입력</span>
+            <span>🕐 영업시간 입력</span>
+            <span>💴 가격대 입력</span>
+          </div>
+        </div>
+        <div class="rest-actions">
+          <button class="rest-action-btn blue" onclick="openGoogleMaps('카페명 입력 삿포로')">
+            🗺️ 지도
+          </button>
+          <div style="flex:2;display:flex;align-items:center;padding:0 14px;gap:8px;border-left:1px solid var(--border);">
+            <span style="font-size:11px;color:var(--text-sub);min-width:46px;">맵코드</span>
+            <span style="font-size:13px;font-weight:700;font-family:monospace;flex:1;" id="mc-r2">입력 예정</span>
+            <button class="copy-btn" onclick="copyMapcode(document.getElementById('mc-r2').textContent, this)">복사</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ====== Bottom Nav ====== -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <span class="nav-ico">🏠</span>
+      <span class="nav-lbl">홈</span>
+    </a>
+    <a href="hotel.html" class="nav-item">
+      <span class="nav-ico">🏨</span>
+      <span class="nav-lbl">호텔</span>
+    </a>
+    <a href="rentacar.html" class="nav-item">
+      <span class="nav-ico">🚗</span>
+      <span class="nav-lbl">렌트카</span>
+    </a>
+    <a href="matjip.html" class="nav-item">
+      <span class="nav-ico">🍜</span>
+      <span class="nav-lbl">맛집</span>
+    </a>
+    <a href="index.html#days" class="nav-item">
+      <span class="nav-ico">📅</span>
+      <span class="nav-lbl">일정</span>
+    </a>
+  </nav>
+
+  <div id="toast" class="toast"></div>
+  <script src="js/app.js"></script>
+  <script>
+    function filterCat(cat, btn) {
+      document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      document.querySelectorAll('.restaurant-card').forEach(card => {
+        const show = cat === 'all' || card.dataset.cat === cat;
+        card.style.display = show ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

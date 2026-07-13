@@ -4,8 +4,8 @@
   "description": "2026.07.14~07.17 삿포로 가족여행 가이드",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#D42B2B",
-  "theme_color": "#D42B2B",
+  "background_color": "#1A6FD4",
+  "theme_color": "#1A6FD4",
   "orientation": "portrait",
   "lang": "ko",
   "icons": [

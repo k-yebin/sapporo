@@ -9,6 +9,7 @@ const PRECACHE = [
   './day2.html',
   './day3.html',
   './day4.html',
+  './matjip.html',
   './css/style.css',
   './js/app.js',
   './manifest.json'

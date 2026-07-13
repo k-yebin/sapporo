@@ -8,13 +8,13 @@
 }
 
 :root {
-  --red:        #D42B2B;
-  --red-dark:   #A91F1F;
-  --red-light:  #FFF0EF;
-  --navy:       #1A1F36;
+  --red:        #1A6FD4;
+  --red-dark:   #0F4FA8;
+  --red-light:  #EFF6FF;
+  --navy:       #0D1B3E;
   --text:       #1C1C1E;
   --text-sub:   #6E6E73;
-  --bg:         #F2F2F7;
+  --bg:         #F2F4F8;
   --card:       #FFFFFF;
   --border:     #E5E5EA;
   --shadow:     0 2px 14px rgba(0,0,0,0.07);
@@ -44,7 +44,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
    Home Header
    =========================== */
 .home-header {
-  background: linear-gradient(150deg, var(--red-dark) 0%, var(--red) 100%);
+  background: linear-gradient(150deg, #0A3D7A 0%, #1A6FD4 100%);
   padding: calc(env(safe-area-inset-top) + 52px) 20px 28px;
   position: relative;
   overflow: hidden;
@@ -543,7 +543,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
    Day Detail Page
    =========================== */
 .day-hero {
-  background: linear-gradient(150deg, var(--red-dark) 0%, var(--red) 100%);
+  background: linear-gradient(150deg, #0A3D7A 0%, #1A6FD4 100%);
   padding: 20px 20px 24px;
   color: #fff;
 }
@@ -837,8 +837,8 @@ button { font-family: inherit; cursor: pointer; border: none; }
 
 .nav-item.active { color: var(--red); }
 
-.nav-ico { font-size: 22px; }
-.nav-lbl { font-size: 10px; font-weight: 600; }
+.nav-ico { font-size: 20px; }
+.nav-lbl { font-size: 9px; font-weight: 600; }
 
 /* ===========================
    Utilities
