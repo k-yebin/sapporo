@@ -33,20 +33,34 @@ function setActiveNav() {
 }
 
 /* ===== Image Modal ===== */
+const _vpMeta = document.querySelector('meta[name=viewport]');
+const _vpDefault = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+const _vpZoom    = 'width=device-width, initial-scale=1.0, user-scalable=yes';
+
 function openModal(src) {
   const overlay = document.getElementById('imgModal');
   const img     = document.getElementById('modalImg');
   if (!overlay || !img) return;
+
   img.src = src;
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
+
+  if (_vpMeta) _vpMeta.setAttribute('content', _vpZoom);
+}
+
+function handleModalTap(e) {
+  if (e.target === document.getElementById('imgModal')) closeModal();
 }
 
 function closeModal() {
   const overlay = document.getElementById('imgModal');
   if (!overlay) return;
+
   overlay.classList.remove('open');
   document.body.style.overflow = '';
+
+  if (_vpMeta) _vpMeta.setAttribute('content', _vpDefault);
 }
 
 /* ===== Language Toggle (reservation images) ===== */
@@ -54,7 +68,7 @@ function switchLang(lang, btn) {
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 
-  document.querySelectorAll('.reservation-imgs').forEach(el => el.classList.add('hidden'));
+  document.querySelectorAll('.reservation-imgs, .file-list').forEach(el => el.classList.add('hidden'));
   const target = document.getElementById('res-' + lang);
   if (target) target.classList.remove('hidden');
 }

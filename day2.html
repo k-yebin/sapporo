@@ -67,9 +67,12 @@
     </div>
   </main>
 
-  <div class="modal-overlay" id="imgModal">
+  <div class="modal-overlay" id="imgModal" onclick="handleModalTap(event)">
     <div class="modal-close" onclick="closeModal()">✕</div>
-    <img class="modal-img" id="modalImg" src="" alt="">
+    <div class="modal-img-wrap">
+      <img class="modal-img" id="modalImg" src="" alt="">
+      <p class="modal-hint">두 손가락으로 확대 · 축소</p>
+    </div>
   </div>
 
   <nav class="bottom-nav">
@@ -84,6 +87,10 @@
     <a href="rentacar.html" class="nav-item">
       <span class="nav-ico">🚗</span>
       <span class="nav-lbl">렌트카</span>
+    </a>
+    <a href="matjip.html" class="nav-item">
+      <span class="nav-ico">🍜</span>
+      <span class="nav-lbl">맛집</span>
     </a>
     <a href="index.html#days" class="nav-item">
       <span class="nav-ico">📅</span>
