@@ -26,8 +26,8 @@
       <div class="info-block">
         <div class="info-block-icon">🚗</div>
         <div>
-          <p class="info-block-name">렌트카 업체명 입력 예정</p>
-          <p class="info-block-sub">신치토세 공항 픽업</p>
+          <p class="info-block-name">버젯 렌터카</p>
+          <p class="info-block-sub">신치토세 공항점 · 08:00~20:00 연중무휴</p>
         </div>
       </div>
     </section>
@@ -58,12 +58,17 @@
         <div class="detail-divider"></div>
         <div class="detail-row">
           <span class="detail-label">픽업 장소</span>
-          <span class="detail-value">신치토세공항 렌터카센터</span>
+          <span class="detail-value">신치토세공항 1층 렌터카 부스</span>
         </div>
         <div class="detail-divider"></div>
         <div class="detail-row">
           <span class="detail-label">예약 번호</span>
           <span class="detail-value">입력 예정</span>
+        </div>
+        <div class="detail-divider"></div>
+        <div class="detail-row">
+          <span class="detail-label">전화</span>
+          <span class="detail-value"><a href="tel:050-1721-8873" style="color:var(--red);font-weight:600;">050-1721-8873</a></span>
         </div>
       </div>
     </section>
@@ -90,9 +95,9 @@
             <div class="step-vline"></div>
           </div>
           <div class="step-body">
-            <p class="step-title">렌터카 셔틀버스 탑승</p>
-            <p class="step-desc">도착 홀 1층 출구 쪽 셔틀버스 정류장에서 렌터카 업체 버스 탑승. 버스는 무료.</p>
-            <span class="step-note">⚠️ 업체 이름 적힌 버스를 확인하고 탑승하세요</span>
+            <p class="step-title">1층 렌터카 부스로 이동</p>
+            <p class="step-desc">공항 1층에 렌터카 업체 부스들이 모여있어. 버젯 렌터카 부스 찾아서 이동.</p>
+            <span class="step-note">⚠️ 직원이 없으면 <a href="tel:050-1721-8873" style="color:#92400E;font-weight:700;">050-1721-8873</a> 으로 전화</span>
           </div>
         </div>
 
@@ -102,8 +107,8 @@
             <div class="step-vline"></div>
           </div>
           <div class="step-body">
-            <p class="step-title">렌터카 영업소 도착</p>
-            <p class="step-desc">셔틀로 5~10분. 영업소에서 예약 확인서 + 여권 + 국제운전면허증 제시.</p>
+            <p class="step-title">송영버스 탑승 → 영업소 이동</p>
+            <p class="step-desc">버젯 렌터카 송영버스 탑승 (무료). 영업소까지 5~10분.</p>
           </div>
         </div>
 
@@ -114,7 +119,7 @@
           </div>
           <div class="step-body">
             <p class="step-title">차량 인수</p>
-            <p class="step-desc">서류 작성 후 차량 배정. 차량 외관 확인 (스크래치 등) 후 출발.</p>
+            <p class="step-desc">예약확인서 + 여권 + 국제운전면허증 제시. 서류 작성 후 차량 배정. 외관 스크래치 꼭 확인.</p>
             <span class="step-note">📋 일본은 좌측통행! 우핸들 차량입니다</span>
           </div>
         </div>
@@ -126,12 +131,12 @@
     <section class="section">
       <h2 class="section-title">픽업 장소 지도</h2>
       <div class="map-buttons">
-        <button class="map-btn google" onclick="openGoogleMaps('신치토세공항 렌터카센터')">
+        <button class="map-btn google" onclick="openGoogleMaps('버젯렌터카 신치토세공항점')">
           🗺️ 구글 지도로 열기
         </button>
         <div class="mapcode-box">
           <span class="mapcode-label">맵코드</span>
-          <span class="mapcode-value" id="carMapcode">입력 예정</span>
+          <span class="mapcode-value" id="carMapcode">113 774 746</span>
           <button class="copy-btn" onclick="copyMapcode(document.getElementById('carMapcode').textContent, this)">복사</button>
         </div>
       </div>
