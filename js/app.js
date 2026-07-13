@@ -68,7 +68,7 @@ function switchLang(lang, btn) {
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 
-  document.querySelectorAll('.reservation-imgs').forEach(el => el.classList.add('hidden'));
+  document.querySelectorAll('.reservation-imgs, .file-list').forEach(el => el.classList.add('hidden'));
   const target = document.getElementById('res-' + lang);
   if (target) target.classList.remove('hidden');
 }

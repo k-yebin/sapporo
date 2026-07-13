@@ -860,6 +860,37 @@ button { font-family: inherit; cursor: pointer; border: none; }
 .nav-lbl { font-size: 9px; font-weight: 600; }
 
 /* ===========================
+   File List (reservation docs)
+   =========================== */
+.file-list { display: flex; flex-direction: column; gap: 8px; }
+.file-list.hidden { display: none !important; }
+
+.file-item {
+  background: var(--card);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: transform .12s ease;
+}
+
+.file-item:active { transform: scale(0.98); }
+
+.file-ico { font-size: 22px; flex-shrink: 0; }
+
+.file-name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.file-arr { color: #C7C7CC; font-size: 18px; }
+
+/* ===========================
    Utilities
    =========================== */
 .hidden { display: none !important; }

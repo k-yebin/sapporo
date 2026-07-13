@@ -116,50 +116,36 @@
 
     <!-- Reservation Images -->
     <section class="section">
-      <h2 class="section-title">예약 확인서</h2>
+      <h2 class="section-title">확정 메일</h2>
 
       <div class="lang-toggle">
         <button class="lang-btn active" onclick="switchLang('ko', this)">한국어</button>
         <button class="lang-btn" onclick="switchLang('ja', this)">日本語</button>
       </div>
 
-      <!-- Korean -->
-      <div class="reservation-imgs" id="res-ko">
-        <div class="res-img-slot" onclick="openModal('images/hotel/ko_1.jpg')">
-          <div class="img-placeholder">
-            <span class="placeholder-emoji">📄</span>
-            <p class="placeholder-txt">예약확인서 1 / 2<br>
-              <span class="placeholder-filename">images/hotel/ko_1.jpg</span>
-            </p>
-          </div>
+      <div class="file-list" id="res-ko">
+        <div class="file-item" onclick="openModal('images/hotel/ko/1.png')">
+          <span class="file-ico">📄</span>
+          <span class="file-name">한국어_질문.png</span>
+          <span class="file-arr">›</span>
         </div>
-        <div class="res-img-slot" onclick="openModal('images/hotel/ko_2.jpg')">
-          <div class="img-placeholder">
-            <span class="placeholder-emoji">📄</span>
-            <p class="placeholder-txt">예약확인서 2 / 2<br>
-              <span class="placeholder-filename">images/hotel/ko_2.jpg</span>
-            </p>
-          </div>
+        <div class="file-item" onclick="openModal('images/hotel/ko/2.png')">
+          <span class="file-ico">📄</span>
+          <span class="file-name">한국어_답변.png</span>
+          <span class="file-arr">›</span>
         </div>
       </div>
 
-      <!-- Japanese -->
-      <div class="reservation-imgs hidden" id="res-ja">
-        <div class="res-img-slot" onclick="openModal('images/hotel/ja_1.jpg')">
-          <div class="img-placeholder">
-            <span class="placeholder-emoji">📄</span>
-            <p class="placeholder-txt">予約確認書 1 / 2<br>
-              <span class="placeholder-filename">images/hotel/ja_1.jpg</span>
-            </p>
-          </div>
+      <div class="file-list hidden" id="res-ja">
+        <div class="file-item" onclick="openModal('images/hotel/ja/1.png')">
+          <span class="file-ico">📄</span>
+          <span class="file-name">일본어_질문.png</span>
+          <span class="file-arr">›</span>
         </div>
-        <div class="res-img-slot" onclick="openModal('images/hotel/ja_2.jpg')">
-          <div class="img-placeholder">
-            <span class="placeholder-emoji">📄</span>
-            <p class="placeholder-txt">予約確認書 2 / 2<br>
-              <span class="placeholder-filename">images/hotel/ja_2.jpg</span>
-            </p>
-          </div>
+        <div class="file-item" onclick="openModal('images/hotel/ja/2.png')">
+          <span class="file-ico">📄</span>
+          <span class="file-name">일본어_답변.png</span>
+          <span class="file-arr">›</span>
         </div>
       </div>
     </section>
