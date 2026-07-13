@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="삿포로">
+  <meta name="theme-color" content="#D42B2B">
+  <title>삿포로 가족여행</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ====== Home Header ====== -->
+  <header class="home-header">
+    <div class="header-inner">
+      <p class="trip-date">2026. 07. 14 — 07. 17 · 3박 4일</p>
+      <h1 class="trip-title">삿포로 가족여행 ✈️</h1>
+      <div class="dday-chip">
+        <span id="dday">계산 중...</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== Flight Banner ====== -->
+  <div class="flight-banner">
+    <div class="flight-row">
+      <span class="flight-dir">가는 편</span>
+      <span class="flight-num">KE5063</span>
+      <span class="flight-route">부산 14:05 → 삿포로 16:25</span>
+    </div>
+    <div class="flight-sep"></div>
+    <div class="flight-row">
+      <span class="flight-dir">오는 편</span>
+      <span class="flight-num">KE5064</span>
+      <span class="flight-route">삿포로 17:25 → 부산 19:50</span>
+    </div>
+  </div>
+
+  <!-- ====== Main ====== -->
+  <main class="main-content">
+
+    <!-- Day Cards -->
+    <section class="section" id="days">
+      <h2 class="section-title">일정</h2>
+      <div class="day-cards">
+
+        <a href="day1.html" class="day-card">
+          <div class="day-num-block">
+            <span class="day-label">Day</span>
+            <span class="day-num">1</span>
+          </div>
+          <div class="day-thumb">🛬</div>
+          <div class="day-info">
+            <p class="day-date-text">7월 14일 (월)</p>
+            <p class="day-headline">삿포로 도착</p>
+            <p class="day-preview">공항 → 렌트카 픽업 → 호텔 체크인</p>
+          </div>
+          <span class="arrow-icon">›</span>
+        </a>
+
+        <a href="day2.html" class="day-card">
+          <div class="day-num-block">
+            <span class="day-label">Day</span>
+            <span class="day-num">2</span>
+          </div>
+          <div class="day-thumb">🗺️</div>
+          <div class="day-info">
+            <p class="day-date-text">7월 15일 (화)</p>
+            <p class="day-headline">일정 입력 예정</p>
+            <p class="day-preview">코스 추가 예정</p>
+          </div>
+          <span class="arrow-icon">›</span>
+        </a>
+
+        <a href="day3.html" class="day-card">
+          <div class="day-num-block">
+            <span class="day-label">Day</span>
+            <span class="day-num">3</span>
+          </div>
+          <div class="day-thumb">🗺️</div>
+          <div class="day-info">
+            <p class="day-date-text">7월 16일 (수)</p>
+            <p class="day-headline">일정 입력 예정</p>
+            <p class="day-preview">코스 추가 예정</p>
+          </div>
+          <span class="arrow-icon">›</span>
+        </a>
+
+        <a href="day4.html" class="day-card">
+          <div class="day-num-block">
+            <span class="day-label">Day</span>
+            <span class="day-num">4</span>
+          </div>
+          <div class="day-thumb">🛫</div>
+          <div class="day-info">
+            <p class="day-date-text">7월 17일 (목)</p>
+            <p class="day-headline">귀국일</p>
+            <p class="day-preview">삿포로 17:25 → 부산 19:50</p>
+          </div>
+          <span class="arrow-icon">›</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="section">
+      <h2 class="section-title">예약 정보</h2>
+      <div class="quick-cards">
+
+        <a href="hotel.html" class="quick-card">
+          <div class="quick-icon hotel-icon">🏨</div>
+          <div class="quick-texts">
+            <p class="quick-title">호텔</p>
+            <p class="quick-sub">체크인 7/14 · 체크아웃 7/17 · 예약확인서 보기</p>
+          </div>
+          <span class="arrow-icon">›</span>
+        </a>
+
+        <a href="rentacar.html" class="quick-card">
+          <div class="quick-icon car-icon">🚗</div>
+          <div class="quick-texts">
+            <p class="quick-title">렌트카</p>
+            <p class="quick-sub">픽업 안내 · 픽업 장소 · 예약확인서 보기</p>
+          </div>
+          <span class="arrow-icon">›</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== Bottom Nav ====== -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <span class="nav-ico">🏠</span>
+      <span class="nav-lbl">홈</span>
+    </a>
+    <a href="hotel.html" class="nav-item">
+      <span class="nav-ico">🏨</span>
+      <span class="nav-lbl">호텔</span>
+    </a>
+    <a href="rentacar.html" class="nav-item">
+      <span class="nav-ico">🚗</span>
+      <span class="nav-lbl">렌트카</span>
+    </a>
+    <a href="index.html#days" class="nav-item">
+      <span class="nav-ico">📅</span>
+      <span class="nav-lbl">일정</span>
+    </a>
+  </nav>
+
+  <div id="toast" class="toast"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

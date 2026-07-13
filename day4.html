@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#D42B2B">
+  <title>Day 4 — 삿포로 여행</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="index.html" class="back-btn">‹</a>
+    <h1 class="page-title">Day 4</h1>
+    <div class="header-spacer"></div>
+  </header>
+
+  <div class="day-hero">
+    <p class="day-hero-label">Day 4 · 7월 17일 (목)</p>
+    <h2 class="day-hero-title">귀국일</h2>
+    <p class="day-hero-date">KE5064 삿포로 17:25 → 부산 19:50</p>
+  </div>
+
+  <main class="main-content">
+    <section class="section">
+      <div class="timeline">
+
+        <!-- 체크아웃 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">오전</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">호텔 체크아웃</p>
+              <span class="place-type">숙소</span>
+            </div>
+            <p class="place-desc">체크아웃 후 짐 보관 or 바로 이동. 마지막 날 오전 일정 입력 예정.</p>
+            <div class="place-meta">
+              <span class="meta-item">⏱ 오전 중</span>
+            </div>
+            <div class="place-actions">
+              <a href="hotel.html" class="place-action-btn red-action">
+                🏨 호텔 정보
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 오전 일정 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">오전</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">오전 일정 입력 예정</p>
+              <span class="place-type">종류 입력</span>
+            </div>
+            <p class="place-desc">장소 및 설명 입력 예정.</p>
+            <div class="place-meta">
+              <span class="meta-item">⏱ 소요 시간 입력</span>
+            </div>
+            <div class="place-actions">
+              <button class="place-action-btn red-action" onclick="openGoogleMaps('장소명 입력')">
+                🗺️ 지도
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 렌트카 반납 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">14:30</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">렌트카 반납</p>
+              <span class="place-type">렌트카</span>
+            </div>
+            <p class="place-desc">공항 렌터카 영업소 반납. 연료 채우고 반납 (업체 조건 확인). 반납 후 셔틀버스로 공항 터미널 이동.</p>
+            <div class="place-meta">
+              <span class="meta-item">⏱ 약 30분</span>
+              <span class="meta-item">⚠️ 출발 2.5시간 전 권장</span>
+            </div>
+            <div class="place-actions">
+              <a href="rentacar.html" class="place-action-btn red-action">
+                🚗 렌트카 정보
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 출국 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">15:00</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">신치토세 공항 출국</p>
+              <span class="place-type">공항</span>
+            </div>
+            <p class="place-desc">체크인 · 수하물 위탁 · 출국심사. 면세점 쇼핑 시간도 있어요.</p>
+            <div class="place-meta">
+              <span class="meta-item">⏱ 출발 2시간 전 도착 권장</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 탑승 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">17:25</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">KE5064 탑승 출발</p>
+              <span class="place-type">비행기</span>
+            </div>
+            <p class="place-desc">삿포로/치토세 (CTS) → 부산/김해 (PUS) · 약 2시간 25분 비행.</p>
+            <div class="place-meta">
+              <span class="meta-item">🛬 부산 도착 19:50</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div style="display:flex; gap:10px; margin-top:8px;">
+      <a href="day3.html" class="map-btn" style="flex:1;font-size:13px;">← Day 3</a>
+      <a href="index.html" class="map-btn google" style="flex:1;font-size:13px;">🏠 홈으로</a>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="imgModal">
+    <div class="modal-close" onclick="closeModal()">✕</div>
+    <img class="modal-img" id="modalImg" src="" alt="">
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <span class="nav-ico">🏠</span>
+      <span class="nav-lbl">홈</span>
+    </a>
+    <a href="hotel.html" class="nav-item">
+      <span class="nav-ico">🏨</span>
+      <span class="nav-lbl">호텔</span>
+    </a>
+    <a href="rentacar.html" class="nav-item">
+      <span class="nav-ico">🚗</span>
+      <span class="nav-lbl">렌트카</span>
+    </a>
+    <a href="index.html#days" class="nav-item">
+      <span class="nav-ico">📅</span>
+      <span class="nav-lbl">일정</span>
+    </a>
+  </nav>
+
+  <div id="toast" class="toast"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

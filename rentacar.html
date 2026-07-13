@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#ffffff">
+  <title>렌트카 — 삿포로 여행</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ====== Page Header ====== -->
+  <header class="page-header">
+    <a href="index.html" class="back-btn">‹</a>
+    <h1 class="page-title">렌트카 정보</h1>
+    <div class="header-spacer"></div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- Car Summary -->
+    <section class="section">
+      <div class="info-block">
+        <div class="info-block-icon">🚗</div>
+        <div>
+          <p class="info-block-name">렌트카 업체명 입력 예정</p>
+          <p class="info-block-sub">신치토세 공항 픽업</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rental Details -->
+    <section class="section">
+      <h2 class="section-title">예약 내용</h2>
+      <div class="detail-card">
+        <div class="detail-row">
+          <span class="detail-label">픽업일</span>
+          <span class="detail-value">2026.07.14 (월)</span>
+        </div>
+        <div class="detail-divider"></div>
+        <div class="detail-row">
+          <span class="detail-label">반납일</span>
+          <span class="detail-value">2026.07.17 (목)</span>
+        </div>
+        <div class="detail-divider"></div>
+        <div class="detail-row">
+          <span class="detail-label">기간</span>
+          <span class="detail-value">3박 4일</span>
+        </div>
+        <div class="detail-divider"></div>
+        <div class="detail-row">
+          <span class="detail-label">차종</span>
+          <span class="detail-value">입력 예정</span>
+        </div>
+        <div class="detail-divider"></div>
+        <div class="detail-row">
+          <span class="detail-label">픽업 장소</span>
+          <span class="detail-value">신치토세공항 렌터카센터</span>
+        </div>
+        <div class="detail-divider"></div>
+        <div class="detail-row">
+          <span class="detail-label">예약 번호</span>
+          <span class="detail-value">입력 예정</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pickup Guide -->
+    <section class="section">
+      <h2 class="section-title">픽업 장소 가는 법</h2>
+      <div class="step-list">
+
+        <div class="step-item">
+          <div class="step-left">
+            <div class="step-num">1</div>
+            <div class="step-vline"></div>
+          </div>
+          <div class="step-body">
+            <p class="step-title">신치토세 공항 도착 (16:25)</p>
+            <p class="step-desc">국제선 터미널 도착 후 수하물 찾기.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-left">
+            <div class="step-num">2</div>
+            <div class="step-vline"></div>
+          </div>
+          <div class="step-body">
+            <p class="step-title">렌터카 셔틀버스 탑승</p>
+            <p class="step-desc">도착 홀 1층 출구 쪽 셔틀버스 정류장에서 렌터카 업체 버스 탑승. 버스는 무료.</p>
+            <span class="step-note">⚠️ 업체 이름 적힌 버스를 확인하고 탑승하세요</span>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-left">
+            <div class="step-num">3</div>
+            <div class="step-vline"></div>
+          </div>
+          <div class="step-body">
+            <p class="step-title">렌터카 영업소 도착</p>
+            <p class="step-desc">셔틀로 5~10분. 영업소에서 예약 확인서 + 여권 + 국제운전면허증 제시.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-left">
+            <div class="step-num">4</div>
+            <div class="step-vline"></div>
+          </div>
+          <div class="step-body">
+            <p class="step-title">차량 인수</p>
+            <p class="step-desc">서류 작성 후 차량 배정. 차량 외관 확인 (스크래치 등) 후 출발.</p>
+            <span class="step-note">📋 일본은 좌측통행! 우핸들 차량입니다</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pickup Location Map -->
+    <section class="section">
+      <h2 class="section-title">픽업 장소 지도</h2>
+      <div class="map-buttons">
+        <button class="map-btn google" onclick="openGoogleMaps('신치토세공항 렌터카센터')">
+          🗺️ 구글 지도로 열기
+        </button>
+        <div class="mapcode-box">
+          <span class="mapcode-label">맵코드</span>
+          <span class="mapcode-value" id="carMapcode">입력 예정</span>
+          <button class="copy-btn" onclick="copyMapcode(document.getElementById('carMapcode').textContent, this)">복사</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation Images -->
+    <section class="section">
+      <h2 class="section-title">예약 확인서</h2>
+
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="switchLang('ko', this)">한국어</button>
+        <button class="lang-btn" onclick="switchLang('ja', this)">日本語</button>
+      </div>
+
+      <!-- Korean -->
+      <div class="reservation-imgs" id="res-ko">
+        <div class="res-img-slot" onclick="openModal('images/rentacar/ko_1.jpg')">
+          <div class="img-placeholder">
+            <span class="placeholder-emoji">📄</span>
+            <p class="placeholder-txt">예약확인서 1 / 2<br>
+              <span class="placeholder-filename">images/rentacar/ko_1.jpg</span>
+            </p>
+          </div>
+        </div>
+        <div class="res-img-slot" onclick="openModal('images/rentacar/ko_2.jpg')">
+          <div class="img-placeholder">
+            <span class="placeholder-emoji">📄</span>
+            <p class="placeholder-txt">예약확인서 2 / 2<br>
+              <span class="placeholder-filename">images/rentacar/ko_2.jpg</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Japanese -->
+      <div class="reservation-imgs hidden" id="res-ja">
+        <div class="res-img-slot" onclick="openModal('images/rentacar/ja_1.jpg')">
+          <div class="img-placeholder">
+            <span class="placeholder-emoji">📄</span>
+            <p class="placeholder-txt">予約確認書 1 / 2<br>
+              <span class="placeholder-filename">images/rentacar/ja_1.jpg</span>
+            </p>
+          </div>
+        </div>
+        <div class="res-img-slot" onclick="openModal('images/rentacar/ja_2.jpg')">
+          <div class="img-placeholder">
+            <span class="placeholder-emoji">📄</span>
+            <p class="placeholder-txt">予約確認書 2 / 2<br>
+              <span class="placeholder-filename">images/rentacar/ja_2.jpg</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== Image Modal ====== -->
+  <div class="modal-overlay" id="imgModal">
+    <div class="modal-close" onclick="closeModal()">✕</div>
+    <img class="modal-img" id="modalImg" src="" alt="예약확인서">
+  </div>
+
+  <!-- ====== Bottom Nav ====== -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <span class="nav-ico">🏠</span>
+      <span class="nav-lbl">홈</span>
+    </a>
+    <a href="hotel.html" class="nav-item">
+      <span class="nav-ico">🏨</span>
+      <span class="nav-lbl">호텔</span>
+    </a>
+    <a href="rentacar.html" class="nav-item">
+      <span class="nav-ico">🚗</span>
+      <span class="nav-lbl">렌트카</span>
+    </a>
+    <a href="index.html#days" class="nav-item">
+      <span class="nav-ico">📅</span>
+      <span class="nav-lbl">일정</span>
+    </a>
+  </nav>
+
+  <div id="toast" class="toast"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

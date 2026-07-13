@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#ffffff">
+  <title>호텔 — 삿포로 여행</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ====== Page Header ====== -->
+  <header class="page-header">
+    <a href="index.html" class="back-btn">‹</a>
+    <h1 class="page-title">호텔 정보</h1>
+    <div class="header-spacer"></div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- Hotel Summary -->
+    <section class="section">
+      <div class="info-block">
+        <div class="info-block-icon">🏨</div>
+        <div>
+          <p class="info-block-name">호텔명 입력 예정</p>
+          <p class="info-block-sub">삿포로시 · 주소 입력 예정</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stay Details -->
+    <section class="section">
+      <h2 class="section-title">예약 내용</h2>
+      <div class="detail-card">
+        <div class="detail-row">
+          <span class="detail-label">체크인</span>
+          <span class="detail-value">2026.07.14 (월)</span>
+        </div>
+        <div class="detail-divider"></div>
+        <div class="detail-row">
+          <span class="detail-label">체크아웃</span>
+          <span class="detail-value">2026.07.17 (목)</span>
+        </div>
+        <div class="detail-divider"></div>
+        <div class="detail-row">
+          <span class="detail-label">숙박</span>
+          <span class="detail-value">3박</span>
+        </div>
+        <div class="detail-divider"></div>
+        <div class="detail-row">
+          <span class="detail-label">주소</span>
+          <span class="detail-value">입력 예정</span>
+        </div>
+        <div class="detail-divider"></div>
+        <div class="detail-row">
+          <span class="detail-label">전화</span>
+          <span class="detail-value">입력 예정</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map & Navigation -->
+    <section class="section">
+      <h2 class="section-title">지도 · 내비</h2>
+      <div class="map-buttons">
+        <button class="map-btn google" onclick="openGoogleMaps('삿포로 호텔명 입력')">
+          🗺️ 구글 지도로 열기
+        </button>
+        <div class="mapcode-box">
+          <span class="mapcode-label">맵코드</span>
+          <span class="mapcode-value" id="hotelMapcode">입력 예정</span>
+          <button class="copy-btn" onclick="copyMapcode(document.getElementById('hotelMapcode').textContent, this)">복사</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation Images -->
+    <section class="section">
+      <h2 class="section-title">예약 확인서</h2>
+
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="switchLang('ko', this)">한국어</button>
+        <button class="lang-btn" onclick="switchLang('ja', this)">日本語</button>
+      </div>
+
+      <!-- Korean -->
+      <div class="reservation-imgs" id="res-ko">
+        <div class="res-img-slot" onclick="openModal('images/hotel/ko_1.jpg')">
+          <div class="img-placeholder">
+            <span class="placeholder-emoji">📄</span>
+            <p class="placeholder-txt">예약확인서 1 / 2<br>
+              <span class="placeholder-filename">images/hotel/ko_1.jpg</span>
+            </p>
+          </div>
+        </div>
+        <div class="res-img-slot" onclick="openModal('images/hotel/ko_2.jpg')">
+          <div class="img-placeholder">
+            <span class="placeholder-emoji">📄</span>
+            <p class="placeholder-txt">예약확인서 2 / 2<br>
+              <span class="placeholder-filename">images/hotel/ko_2.jpg</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Japanese -->
+      <div class="reservation-imgs hidden" id="res-ja">
+        <div class="res-img-slot" onclick="openModal('images/hotel/ja_1.jpg')">
+          <div class="img-placeholder">
+            <span class="placeholder-emoji">📄</span>
+            <p class="placeholder-txt">予約確認書 1 / 2<br>
+              <span class="placeholder-filename">images/hotel/ja_1.jpg</span>
+            </p>
+          </div>
+        </div>
+        <div class="res-img-slot" onclick="openModal('images/hotel/ja_2.jpg')">
+          <div class="img-placeholder">
+            <span class="placeholder-emoji">📄</span>
+            <p class="placeholder-txt">予約確認書 2 / 2<br>
+              <span class="placeholder-filename">images/hotel/ja_2.jpg</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== Image Modal ====== -->
+  <div class="modal-overlay" id="imgModal">
+    <div class="modal-close" onclick="closeModal()">✕</div>
+    <img class="modal-img" id="modalImg" src="" alt="예약확인서">
+  </div>
+
+  <!-- ====== Bottom Nav ====== -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <span class="nav-ico">🏠</span>
+      <span class="nav-lbl">홈</span>
+    </a>
+    <a href="hotel.html" class="nav-item">
+      <span class="nav-ico">🏨</span>
+      <span class="nav-lbl">호텔</span>
+    </a>
+    <a href="rentacar.html" class="nav-item">
+      <span class="nav-ico">🚗</span>
+      <span class="nav-lbl">렌트카</span>
+    </a>
+    <a href="index.html#days" class="nav-item">
+      <span class="nav-ico">📅</span>
+      <span class="nav-lbl">일정</span>
+    </a>
+  </nav>
+
+  <div id="toast" class="toast"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#D42B2B">
+  <title>Day 2 — 삿포로 여행</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="page-header">
+    <a href="index.html" class="back-btn">‹</a>
+    <h1 class="page-title">Day 2</h1>
+    <div class="header-spacer"></div>
+  </header>
+
+  <div class="day-hero">
+    <p class="day-hero-label">Day 2 · 7월 15일 (화)</p>
+    <h2 class="day-hero-title">일정 입력 예정</h2>
+    <p class="day-hero-date">코스 추가 예정</p>
+  </div>
+
+  <main class="main-content">
+    <section class="section">
+
+      <!-- 아래 timeline-item 블록을 복사해서 일정 추가하면 돼 -->
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">00:00</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">장소명 입력</p>
+              <span class="place-type">종류 입력</span>
+            </div>
+            <p class="place-desc">설명 입력.</p>
+            <div class="place-meta">
+              <span class="meta-item">⏱ 소요 시간 입력</span>
+            </div>
+            <div class="place-actions">
+              <button class="place-action-btn red-action" onclick="openGoogleMaps('장소명 입력')">
+                🗺️ 지도
+              </button>
+              <div class="mapcode-box" style="border:none;box-shadow:none;padding:8px 14px;flex:1;">
+                <span class="mapcode-label">맵코드</span>
+                <span class="mapcode-value" id="mc-d2-1">입력 예정</span>
+                <button class="copy-btn" onclick="copyMapcode(document.getElementById('mc-d2-1').textContent, this)">복사</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div style="display:flex; gap:10px; margin-top:8px;">
+      <a href="day1.html" class="map-btn" style="flex:1;font-size:13px;">← Day 1</a>
+      <a href="day3.html" class="map-btn google" style="flex:1;font-size:13px;">Day 3 →</a>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="imgModal">
+    <div class="modal-close" onclick="closeModal()">✕</div>
+    <img class="modal-img" id="modalImg" src="" alt="">
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <span class="nav-ico">🏠</span>
+      <span class="nav-lbl">홈</span>
+    </a>
+    <a href="hotel.html" class="nav-item">
+      <span class="nav-ico">🏨</span>
+      <span class="nav-lbl">호텔</span>
+    </a>
+    <a href="rentacar.html" class="nav-item">
+      <span class="nav-ico">🚗</span>
+      <span class="nav-lbl">렌트카</span>
+    </a>
+    <a href="index.html#days" class="nav-item">
+      <span class="nav-ico">📅</span>
+      <span class="nav-lbl">일정</span>
+    </a>
+  </nav>
+
+  <div id="toast" class="toast"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
