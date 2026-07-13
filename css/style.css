@@ -508,9 +508,9 @@ button { font-family: inherit; cursor: pointer; border: none; }
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.92);
+  background: #000;
   z-index: 200;
-  overflow-y: auto;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -518,25 +518,44 @@ button { font-family: inherit; cursor: pointer; border: none; }
 
 .modal-close {
   position: fixed;
-  top: calc(env(safe-area-inset-top) + 16px);
+  top: calc(env(safe-area-inset-top) + 14px);
   right: 16px;
-  width: 36px; height: 36px;
-  background: rgba(255,255,255,0.15);
+  width: 38px; height: 38px;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 18px;
+  font-size: 17px;
   cursor: pointer;
   z-index: 201;
+}
+
+.modal-img-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: calc(env(safe-area-inset-top) + 60px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 24px);
 }
 
 .modal-img {
   width: 100%;
   display: block;
-  padding-top: calc(env(safe-area-inset-top) + 60px);
-  padding-bottom: calc(env(safe-area-inset-bottom) + 20px);
+  touch-action: pan-x pan-y pinch-zoom;
+}
+
+.modal-hint {
+  text-align: center;
+  color: rgba(255,255,255,0.35);
+  font-size: 11px;
+  margin-top: 12px;
+  letter-spacing: 0.3px;
 }
 
 /* ===========================

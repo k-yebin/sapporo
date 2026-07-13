@@ -131,9 +131,12 @@
   </main>
 
   <!-- ====== Image Modal ====== -->
-  <div class="modal-overlay" id="imgModal">
+  <div class="modal-overlay" id="imgModal" onclick="handleModalTap(event)">
     <div class="modal-close" onclick="closeModal()">✕</div>
-    <img class="modal-img" id="modalImg" src="" alt="예약확인서">
+    <div class="modal-img-wrap">
+      <img class="modal-img" id="modalImg" src="" alt="예약확인서">
+      <p class="modal-hint">두 손가락으로 확대 · 축소</p>
+    </div>
   </div>
 
   <!-- ====== Bottom Nav ====== -->
