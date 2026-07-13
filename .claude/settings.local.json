@@ -5,7 +5,23 @@
       "Bash(git commit *)",
       "Bash(git push *)",
       "Bash(Get-ChildItem -Recurse \"C:\\\\Users\\\\ez\\\\Desktop\\\\sapporo\\\\images\")",
-      "Bash(Select-Object FullName)"
+      "Bash(Select-Object FullName)",
+      "Skill(run)",
+      "PowerShell(npm *)",
+      "PowerShell(npx --yes live-server --port=8080 --browser=\"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\" --entry-file=index.html .)",
+      "Bash(node -e ' *)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(npx --yes playwright screenshot --viewport-size=390,1800 --full-page \"http://127.0.0.1:8080/day2.html\" \"C:/Users/강예빈/AppData/Local/Temp/claude/C--Users-----sapporo/6f499e14-dd65-4854-ae27-71564841c157/scratchpad/day2.png\")",
+      "Bash(gh api *)",
+      "Bash(curl *)",
+      "Bash(where magick *)",
+      "Bash(where convert *)",
+      "Bash(python -c \"import PIL; print\\(PIL.__version__\\)\")",
+      "Bash(command -v python3)",
+      "Bash(command -v python)",
+      "Bash(command -v node)",
+      "Bash(node -e \"console.log\\(process.version\\)\")",
+      "Bash(node *)"
     ]
   }
 }

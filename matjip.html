@@ -47,6 +47,9 @@
       margin-bottom: 12px;
     }
 
+    .rest-thumb { width: 100%; height: 160px; overflow: hidden; }
+    .rest-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
     .rest-body { padding: 14px 16px 0; }
 
     .rest-top {
@@ -149,84 +152,178 @@
     <!-- 식당 카드들 -->
     <div id="restaurantList">
 
-      <!-- 스스키노 예시 -->
+      <!-- 스프카레 가라쿠 삿포로 본점 -->
       <div class="restaurant-card" data-cat="susukino">
+        <div class="rest-thumb">
+          <img src="images/bob/garaku.png" alt="스프카레 가라쿠 삿포로 본점">
+        </div>
         <div class="rest-body">
           <div class="rest-top">
-            <p class="rest-name">식당명 입력</p>
+            <p class="rest-name">스프카레 가라쿠 삿포로 본점</p>
             <span class="rest-badge">스스키노</span>
           </div>
-          <p class="rest-name-ja">日本語名 入力</p>
-          <p class="rest-desc">메모 · 추천 메뉴 · 특징 입력 예정.</p>
+          <p class="rest-name-ja">スープカレー GARAKU 札幌本店</p>
           <div class="rest-meta">
-            <span>📍 주소 입력</span>
-            <span>🕐 영업시간 입력</span>
-            <span>💴 가격대 입력</span>
+            <span>🕐 화·수·목 11:30~15:00, 17:00~20:30</span>
+            <span>🅿️ 주차 불가</span>
+            <span>📵 예약 불가</span>
           </div>
         </div>
         <div class="rest-actions">
-          <button class="rest-action-btn blue" onclick="openGoogleMaps('식당명 스스키노')">
-            🗺️ 지도
-          </button>
-          <div style="flex:2;display:flex;align-items:center;padding:0 14px;gap:8px;border-left:1px solid var(--border);">
-            <span style="font-size:11px;color:var(--text-sub);min-width:46px;">맵코드</span>
-            <span style="font-size:13px;font-weight:700;font-family:monospace;flex:1;" id="mc-r1">입력 예정</span>
-            <button class="copy-btn" onclick="copyMapcode(document.getElementById('mc-r1').textContent, this)">복사</button>
-          </div>
+          <a class="rest-action-btn blue" href="https://maps.app.goo.gl/yJaxcWobiJCBdtE3A" target="_blank" rel="noopener">
+            🗺️ 구글 지도
+          </a>
+          <a class="rest-action-btn blue" href="https://blog.naver.com/lja991013/224339034577" target="_blank" rel="noopener">
+            📝 네이버 리뷰
+          </a>
         </div>
       </div>
 
-      <!-- 오타루 예시 -->
-      <div class="restaurant-card" data-cat="otaru">
+      <!-- 수프카레 트레져 -->
+      <div class="restaurant-card" data-cat="susukino">
+        <div class="rest-thumb">
+          <img src="images/bob/treasure.png" alt="수프카레 트레져">
+        </div>
         <div class="rest-body">
           <div class="rest-top">
-            <p class="rest-name">식당명 입력</p>
+            <p class="rest-name">수프카레 트레져</p>
+            <span class="rest-badge">스스키노</span>
+          </div>
+          <div class="rest-meta">
+            <span>🕐 화~금 11:30~15:00, 17:00~20:30</span>
+          </div>
+        </div>
+        <div class="rest-actions">
+          <a class="rest-action-btn blue" href="https://maps.app.goo.gl/RsjjwH8ik9aehB8h6" target="_blank" rel="noopener">
+            🗺️ 구글 지도
+          </a>
+          <a class="rest-action-btn blue" href="https://blog.naver.com/shoneeee/224157750773" target="_blank" rel="noopener">
+            📝 네이버 리뷰
+          </a>
+        </div>
+      </div>
+
+      <!-- 홋카이도 징기스칸 마사진 스스키노 본점 -->
+      <div class="restaurant-card" data-cat="susukino">
+        <div class="rest-thumb">
+          <img src="images/bob/masajin.png" alt="홋카이도 징기스칸 마사진 스스키노 본점">
+        </div>
+        <div class="rest-body">
+          <div class="rest-top">
+            <p class="rest-name">홋카이도 징기스칸 마사진 스스키노 본점</p>
+            <span class="rest-badge">스스키노</span>
+          </div>
+          <div class="rest-meta">
+            <span>🕐 화~금 17:00~23:00</span>
+          </div>
+        </div>
+        <div class="rest-actions">
+          <a class="rest-action-btn blue" href="https://maps.app.goo.gl/aAvTiQee1GSic4jj8" target="_blank" rel="noopener">
+            🗺️ 구글 지도
+          </a>
+          <a class="rest-action-btn blue" href="https://blog.naver.com/tkfka0622/224161948307" target="_blank" rel="noopener">
+            📝 네이버 리뷰
+          </a>
+        </div>
+      </div>
+
+      <!-- 마루미 커피 -->
+      <div class="restaurant-card" data-cat="otaru">
+        <div class="rest-thumb">
+          <img src="images/bob/marumi.png" alt="마루미커피">
+        </div>
+        <div class="rest-body">
+          <div class="rest-top">
+            <p class="rest-name">마루미커피</p>
             <span class="rest-badge">오타루</span>
           </div>
-          <p class="rest-name-ja">日本語名 入力</p>
-          <p class="rest-desc">메모 · 추천 메뉴 · 특징 입력 예정.</p>
           <div class="rest-meta">
-            <span>📍 주소 입력</span>
-            <span>🕐 영업시간 입력</span>
-            <span>💴 가격대 입력</span>
+            <span>🕐 화~금 10:30~20:00</span>
           </div>
         </div>
         <div class="rest-actions">
-          <button class="rest-action-btn blue" onclick="openGoogleMaps('식당명 오타루')">
-            🗺️ 지도
-          </button>
-          <div style="flex:2;display:flex;align-items:center;padding:0 14px;gap:8px;border-left:1px solid var(--border);">
-            <span style="font-size:11px;color:var(--text-sub);min-width:46px;">맵코드</span>
-            <span style="font-size:13px;font-weight:700;font-family:monospace;flex:1;" id="mc-r2">입력 예정</span>
-            <button class="copy-btn" onclick="copyMapcode(document.getElementById('mc-r2').textContent, this)">복사</button>
-          </div>
+          <a class="rest-action-btn blue" href="https://maps.app.goo.gl/8TWYPSSUQStCpk8Y8" target="_blank" rel="noopener">
+            🗺️ 구글 지도
+          </a>
+          <a class="rest-action-btn blue" href="https://blog.naver.com/dazdada/224011691324" target="_blank" rel="noopener">
+            📝 네이버 리뷰
+          </a>
         </div>
       </div>
 
-      <!-- 비에이/후라노 예시 -->
-      <div class="restaurant-card" data-cat="biei">
+      <!-- 기타이치홀 -->
+      <div class="restaurant-card" data-cat="otaru">
+        <div class="rest-thumb">
+          <img src="images/bob/hall.png" alt="기타이치홀">
+        </div>
         <div class="rest-body">
           <div class="rest-top">
-            <p class="rest-name">식당명 입력</p>
-            <span class="rest-badge">비에이·후라노</span>
+            <p class="rest-name">기타이치홀</p>
+            <span class="rest-badge">오타루</span>
           </div>
-          <p class="rest-name-ja">日本語名 入力</p>
-          <p class="rest-desc">메모 · 추천 메뉴 · 특징 입력 예정.</p>
+          <p class="rest-desc">메이지 시대(약 150년 전) 창고를 개조한 레트로 카페.<br>167개의 석유 램프만으로 내부를 밝히는 환상적인 분위기로 유명.<br>피아노 연주 (화~금): 14:00~14:30, 15:00~15:30, 16:00~16:30.</p>
           <div class="rest-meta">
-            <span>📍 주소 입력</span>
-            <span>🕐 영업시간 입력</span>
-            <span>💴 가격대 입력</span>
+            <span>🕐 화~금 09:00~17:30</span>
           </div>
         </div>
         <div class="rest-actions">
-          <button class="rest-action-btn blue" onclick="openGoogleMaps('식당명 비에이')">
-            🗺️ 지도
-          </button>
-          <div style="flex:2;display:flex;align-items:center;padding:0 14px;gap:8px;border-left:1px solid var(--border);">
-            <span style="font-size:11px;color:var(--text-sub);min-width:46px;">맵코드</span>
-            <span style="font-size:13px;font-weight:700;font-family:monospace;flex:1;" id="mc-r3">입력 예정</span>
-            <button class="copy-btn" onclick="copyMapcode(document.getElementById('mc-r3').textContent, this)">복사</button>
+          <a class="rest-action-btn blue" href="https://maps.app.goo.gl/bWrWxKPoCHhscqfYA" target="_blank" rel="noopener">
+            🗺️ 구글 지도
+          </a>
+          <a class="rest-action-btn blue" href="https://blog.naver.com/lim_inj/224191758932" target="_blank" rel="noopener">
+            📝 네이버 리뷰
+          </a>
+        </div>
+      </div>
+
+      <!-- 카마에이 어묵공장 -->
+      <div class="restaurant-card" data-cat="otaru">
+        <div class="rest-thumb">
+          <img src="images/bob/kama.png" alt="카마에이 어묵공장">
+        </div>
+        <div class="rest-body">
+          <div class="rest-top">
+            <p class="rest-name">카마에이 어묵공장</p>
+            <span class="rest-badge">오타루</span>
           </div>
+          <p class="rest-desc">100년이 넘는 역사의 오타루 대표 어묵 브랜드 '카마에이'의 공장 직영점.<br>갓 튀긴 어묵과 명물 '빵롤(Pan Roll)'을 맛볼 수 있음.</p>
+          <div class="rest-meta">
+            <span>🕐 화~금 09:00~18:00</span>
+          </div>
+        </div>
+        <div class="rest-actions">
+          <a class="rest-action-btn blue" href="https://maps.app.goo.gl/netQzwGHbqCdw6oV9" target="_blank" rel="noopener">
+            🗺️ 구글 지도
+          </a>
+          <a class="rest-action-btn blue" href="https://blog.naver.com/yamyak/224342963410" target="_blank" rel="noopener">
+            📝 네이버 리뷰
+          </a>
+        </div>
+      </div>
+
+      <!-- JR타워 전망대 -->
+      <div class="restaurant-card" data-cat="etc">
+        <div class="rest-thumb">
+          <img src="images/bob/jr.png" alt="JR타워 전망대">
+        </div>
+        <div class="rest-body">
+          <div class="rest-top">
+            <p class="rest-name">JR타워 전망대</p>
+            <span class="rest-badge">기타</span>
+          </div>
+          <p class="rest-desc">38층 전망대 · 카페 · 선물가게 있음.<br>티켓 카운터는 스텔라 플레이스 센터 6층.</p>
+          <div class="rest-meta">
+            <span>🕐 화~금 10:00~22:00</span>
+            <span>💴 1인 740엔</span>
+          </div>
+        </div>
+        <div class="rest-actions">
+          <a class="rest-action-btn blue" href="https://maps.app.goo.gl/xUZY7LrvZm1NnPmH7" target="_blank" rel="noopener">
+            🗺️ 구글 지도
+          </a>
+          <a class="rest-action-btn blue" href="https://blog.naver.com/fog464646/224029390350" target="_blank" rel="noopener">
+            📝 네이버 리뷰
+          </a>
         </div>
       </div>
 
