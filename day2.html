@@ -20,44 +20,217 @@
 
   <div class="day-hero">
     <p class="day-hero-label">Day 2 · 7월 15일 (화)</p>
-    <h2 class="day-hero-title">일정 입력 예정</h2>
-    <p class="day-hero-date">코스 추가 예정</p>
+    <h2 class="day-hero-title">샤코탄 + 오타루</h2>
+    <p class="day-hero-date">바다 풍경 + 우니동 + 오타루 · 08:00 호텔 출발</p>
   </div>
 
   <main class="main-content">
     <section class="section">
-
-      <!-- 아래 timeline-item 블록을 복사해서 일정 추가하면 돼 -->
       <div class="timeline">
 
+        <!-- 호텔 출발 -->
         <div class="timeline-item">
           <div class="timeline-left">
-            <span class="timeline-time">00:00</span>
+            <span class="timeline-time">08:00</span>
             <div class="timeline-dot"></div>
             <div class="timeline-line"></div>
           </div>
           <div class="timeline-card">
             <div class="timeline-card-header">
-              <p class="place-name">장소명 입력</p>
-              <span class="place-type">종류 입력</span>
+              <p class="place-name">호텔 출발</p>
+              <span class="place-type">출발</span>
             </div>
-            <p class="place-desc">설명 입력.</p>
-            <div class="place-meta">
-              <span class="meta-item">⏱ 소요 시간 입력</span>
+            <p class="place-desc">라젠트 스테이 삿포로 오도리 출발.</p>
+          </div>
+        </div>
+
+        <!-- 스페이스 애플 요이치 휴게소 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">09:30<br>~09:50</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">🚗 스페이스 애플 요이치 휴게소</p>
+              <span class="place-type">휴게소</span>
             </div>
+            <p class="place-desc">샤코탄 가기 전에 화장실 가고, 커피 마시고, 사과 디저트 먹으면서 쉬어가는 홋카이도 휴게소예요.<br>요이치(余市)는 일교차가 크고 배수 좋은 토양·바닷바람 덕분에 사과·포도·체리로 유명한 홋카이도 최대 과수 산지라 휴게소 이름에도 'Apple'이 들어감.<br>🍎 사과주스 · 사과파이 · 사과잼 · 사과 소프트아이스크림 판매.</p>
             <div class="place-actions">
-              <button class="place-action-btn red-action" onclick="openGoogleMaps('장소명 입력')">
-                🗺️ 지도
-              </button>
-              <div class="mapcode-box" style="border:none;box-shadow:none;padding:8px 14px;flex:1;">
-                <span class="mapcode-label">맵코드</span>
-                <span class="mapcode-value" id="mc-d2-1">입력 예정</span>
-                <button class="copy-btn" onclick="copyMapcode(document.getElementById('mc-d2-1').textContent, this)">복사</button>
-              </div>
+              <a href="https://maps.app.goo.gl/Gvge92mKHZ1Sds9x6" target="_blank" class="place-action-btn red-action">
+                🗺️ 구글 지도
+              </a>
             </div>
           </div>
         </div>
 
+        <!-- 시마무이 해안 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">10:20<br>~10:50</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">📍 시마무이 해안</p>
+              <span class="place-type">관광</span>
+            </div>
+            <p class="place-desc">홋카이도를 대표하는 절경 중 하나로, '샤코탄 블루'라 불리는 투명한 에메랄드빛 바다를 감상할 수 있는 전망 명소.<br>터널을 지나 전망대에 도착하면 깎아지른 절벽과 푸른 바다가 한눈에 펼쳐짐.<br>사진 · 바다 감상 · 화장실.<br>체류 30분 정도.<br><b style="color:#D42B2B;">⚠️ 꼭 왼쪽길 터널을 지나 [시마무이 해안 전망대]로 가는 길로 가야함.</b></p>
+            <div class="place-actions">
+              <a href="https://maps.app.goo.gl/qZ7m9URRgYHCbF7X7" target="_blank" class="place-action-btn red-action">
+                🗺️ 구글 지도
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 카무이미사키 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">11:10<br>~12:30</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">📍 카무이미사키(카무이곶)</p>
+              <span class="place-type">관광</span>
+            </div>
+            <p class="place-desc">아이누족 여인이 사랑에 실패한 뒤 바위가 되었다는 전설이 전해지며, 그 이후 이곳에 여성이 들어가면 배가 난파한다는 이야기가 생겨 오랫동안 '금녀의 땅'으로 여겨짐.<br>현재는 누구나 자유롭게 방문할 수 있으며, 입구에는 당시를 상징하는 '금녀의 문'이 남아 있음.<br>산책 · 샤코탄 블루 감상 · 사진.<br>점심시간 직전에 도착하니까 사람도 아직 엄청 몰리기 전임.</p>
+            <div class="place-actions">
+              <a href="https://maps.app.goo.gl/3Uuz8MWGNauPWvcv6" target="_blank" class="place-action-btn red-action">
+                🗺️ 구글 지도 (주차장)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 우니동 점심 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">12:40<br>~13:40</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">🍚 우니동 점심</p>
+              <span class="place-type">식사</span>
+            </div>
+            <p class="place-desc"><b style="color:#D97706;">⚠️ 이게 중요.</b><br>7월 중순이면 성게 시즌이라 사람 진짜 많아.<br>13시 넘으면 재료 소진되는 집도 있어.<br>그래서 시마무이 → 카무이미사키 → 우니동 이 순서가 딱 좋아.</p>
+          </div>
+        </div>
+
+        <!-- 오타루 이동 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">13:40</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">오타루로 이동</p>
+              <span class="place-type">이동</span>
+            </div>
+            <p class="place-desc">약 1시간 20분 소요.</p>
+          </div>
+        </div>
+
+        <!-- 오타루 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">15:00<br>~17:30</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">📍 오타루</p>
+              <span class="place-type">관광</span>
+            </div>
+            <p class="place-desc">오타루 운하 · 사카이마치 거리 · 르타오 · 오르골당.<br>여기는 비 조금 와도 괜찮음.</p>
+            <div style="margin:0 16px 12px;padding:10px 12px;background:var(--bg);border-radius:10px;">
+              <p style="font-size:13px;font-weight:700;margin-bottom:4px;">☕ 기타이치홀 (카페)</p>
+              <p style="font-size:12px;color:var(--text-sub);line-height:1.6;">메이지 시대(약 150년 전) 창고를 개조한 레트로 카페.<br>167개의 석유 램프로 밝히는 분위기로 유명.<br>피아노 연주(화~금) 14:00~14:30 · 15:00~15:30 · 16:00~16:30.<br>화~금 09:00~17:30.</p>
+              <div style="display:flex;gap:14px;margin-top:8px;">
+                <a href="https://maps.app.goo.gl/bWrWxKPoCHhscqfYA" target="_blank" style="font-size:12px;color:var(--red);font-weight:600;text-decoration:none;">🗺️ 구글 지도</a>
+                <a href="https://blog.naver.com/lim_inj/224191758932" target="_blank" style="font-size:12px;color:var(--red);font-weight:600;text-decoration:none;">📝 네이버 리뷰</a>
+              </div>
+            </div>
+            <div style="margin:0 16px 12px;padding:10px 12px;background:var(--bg);border-radius:10px;">
+              <p style="font-size:13px;font-weight:700;margin-bottom:4px;">🐟 카마에이 어묵공장</p>
+              <p style="font-size:12px;color:var(--text-sub);line-height:1.6;">100년 넘는 역사의 오타루 대표 어묵 브랜드 '카마에이' 공장 직영점.<br>갓 튀긴 어묵과 명물 '빵롤(Pan Roll)'.<br>화~금 09:00~18:00.</p>
+              <div style="display:flex;gap:14px;margin-top:8px;">
+                <a href="https://maps.app.goo.gl/netQzwGHbqCdw6oV9" target="_blank" style="font-size:12px;color:var(--red);font-weight:600;text-decoration:none;">🗺️ 구글 지도</a>
+                <a href="https://blog.naver.com/yamyak/224342963410" target="_blank" style="font-size:12px;color:var(--red);font-weight:600;text-decoration:none;">📝 네이버 리뷰</a>
+              </div>
+            </div>
+            <div style="margin:0 16px 12px;padding:10px 12px;background:var(--bg);border-radius:10px;">
+              <p style="font-size:13px;font-weight:700;margin-bottom:4px;">🎵 오르골당 본관</p>
+              <div style="display:flex;gap:14px;margin-top:8px;">
+                <a href="https://maps.app.goo.gl/badkc9SEaxS54LHo7" target="_blank" style="font-size:12px;color:var(--red);font-weight:600;text-decoration:none;">🗺️ 구글 지도</a>
+              </div>
+            </div>
+            <div class="place-actions">
+              <a href="https://maps.app.goo.gl/K2FPgswLWkVoWXu3A" target="_blank" class="place-action-btn red-action">
+                🗺️ 구글 지도 (관광주차장)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 삿포로 복귀 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">18:30</span>
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">삿포로 복귀</p>
+              <span class="place-type">도착</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 저녁 이후 -->
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <span class="timeline-time">이후</span>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <p class="place-name">저녁 & 자유시간</p>
+              <span class="place-type">자유</span>
+            </div>
+            <p class="place-desc">저녁 · 호텔 휴식 · 스스키노 산책.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 총 운전 시간 -->
+    <section class="section">
+      <h2 class="section-title">🚗 총 운전 시간</h2>
+      <div class="timeline-card" style="margin-left:60px;">
+        <div class="timeline-card-header">
+          <p class="place-desc" style="padding:0;margin-bottom:10px;">
+            삿포로 → 시마무이 해안 : 약 2시간 20분<br>
+            시마무이 해안 → 카무이미사키 : 약 20분<br>
+            카무이미사키 → 우니동 식당 : 10~20분<br>
+            우니동 식당 → 오타루 : 약 1시간 20분<br>
+            오타루 → 삿포로 : 약 1시간
+          </p>
+        </div>
+        <div class="place-meta">
+          <span class="meta-item">⏱ 총 운전 약 5시간</span>
+        </div>
       </div>
     </section>
 
